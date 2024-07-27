@@ -37,10 +37,6 @@ end
   Tag.create(title: Faker::Lorem.word)
 end
 
-Gossip.all.each do |gossip|
-  gossip.tags << Tag.all.sample
-end
-
 20.times do
   user = User.all.sample
   gossip = Gossip.all.sample
@@ -74,5 +70,15 @@ end
   User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: Faker::Internet.email, password: 'password',description: Faker::Lorem.sentence, age: Faker::Number.between(from: 18, to: 99))
 end
 
+gossip = Gossip.create(title: "Mon super potin", content: "Un potin croustillant")
 
+tag1 = Tag.find_or_create_by(name: "Potin")
+tag2 = Tag.find_or_create_by(name: "Croustillant")
 
+gossip.tags << tag1
+gossip.tags << tag2
+gossip.save
+
+user = User.new(email: "user@example.com")
+user.password = "secretpassword"
+user.save!

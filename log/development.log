@@ -749,3 +749,1199 @@ FOREIGN KEY ("tag_id")
   [1m[36mTag Create (3.6ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "recusandae"], ["created_at", "2024-07-26 23:21:25.790854"], ["updated_at", "2024-07-26 23:21:25.790854"]]
   [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
   [1m[36mGossip Load (2.4ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[35m (108.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (1127.2ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Schmidtton"], ["created_at", "2024-07-27 07:27:31.628111"], ["updated_at", "2024-07-27 07:27:31.628111"], ["zip_code", "58638"]]
+  [1m[36mTRANSACTION (178.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (139.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mendy.grady@jenkins.example"], ["LIMIT", 1]]
+  [1m[36mUser Create (121.4ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "created_at", "updated_at", "first_name", "last_name", "description", "email", "age") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["city_id", 51], ["created_at", "2024-07-27 07:27:33.665471"], ["updated_at", "2024-07-27 07:27:33.665471"], ["first_name", "Chadwick"], ["last_name", "Rowe"], ["description", "Ut reprehenderit eius est."], ["email", "mendy.grady@jenkins.example"], ["age", 88]]
+  [1m[36mTRANSACTION (271.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (115.7ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "South Mariano"], ["created_at", "2024-07-27 07:27:34.071680"], ["updated_at", "2024-07-27 07:27:34.071680"], ["zip_code", "52138-8489"]]
+  [1m[36mTRANSACTION (306.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (63.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "antonio.deckow@swift.test"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "created_at", "updated_at", "first_name", "last_name", "description", "email", "age") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["city_id", 52], ["created_at", "2024-07-27 07:27:34.588524"], ["updated_at", "2024-07-27 07:27:34.588524"], ["first_name", "Josiah"], ["last_name", "Auer"], ["description", "Expedita eos voluptas voluptatem."], ["email", "antonio.deckow@swift.test"], ["age", 38]]
+  [1m[36mTRANSACTION (199.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (1.1ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Rosaleeburgh"], ["created_at", "2024-07-27 07:27:34.798292"], ["updated_at", "2024-07-27 07:27:34.798292"], ["zip_code", "87631"]]
+  [1m[36mTRANSACTION (296.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jacob@koelpin-olson.test"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "created_at", "updated_at", "first_name", "last_name", "description", "email", "age") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["city_id", 53], ["created_at", "2024-07-27 07:27:35.127478"], ["updated_at", "2024-07-27 07:27:35.127478"], ["first_name", "Shauna"], ["last_name", "Cummerata"], ["description", "Tempora veritatis nam itaque."], ["email", "jacob@koelpin-olson.test"], ["age", 55]]
+  [1m[36mTRANSACTION (109.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (171.7ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Sharanton"], ["created_at", "2024-07-27 07:27:35.251196"], ["updated_at", "2024-07-27 07:27:35.251196"], ["zip_code", "39910"]]
+  [1m[36mTRANSACTION (57.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "isiah@stroman-lehner.test"], ["LIMIT", 1]]
+  [1m[36mUser Create (96.6ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "created_at", "updated_at", "first_name", "last_name", "description", "email", "age") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["city_id", 54], ["created_at", "2024-07-27 07:27:35.506138"], ["updated_at", "2024-07-27 07:27:35.506138"], ["first_name", "Diego"], ["last_name", "Romaguera"], ["description", "Nemo et ut nostrum."], ["email", "isiah@stroman-lehner.test"], ["age", 68]]
+  [1m[36mTRANSACTION (217.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (1.1ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "South Rubin"], ["created_at", "2024-07-27 07:27:35.831902"], ["updated_at", "2024-07-27 07:27:35.831902"], ["zip_code", "24610-4275"]]
+  [1m[36mTRANSACTION (58.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "marcus@kautzer-stoltenberg.test"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "created_at", "updated_at", "first_name", "last_name", "description", "email", "age") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["city_id", 55], ["created_at", "2024-07-27 07:27:35.923890"], ["updated_at", "2024-07-27 07:27:35.923890"], ["first_name", "Kendall"], ["last_name", "Turcotte"], ["description", "Aliquid voluptates eius dolorem."], ["email", "marcus@kautzer-stoltenberg.test"], ["age", 21]]
+  [1m[36mTRANSACTION (46.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (1.0ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "South Larhonda"], ["created_at", "2024-07-27 07:27:35.984065"], ["updated_at", "2024-07-27 07:27:35.984065"], ["zip_code", "01932"]]
+  [1m[36mTRANSACTION (62.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bernie.skiles@mayer-moore.test"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "created_at", "updated_at", "first_name", "last_name", "description", "email", "age") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["city_id", 56], ["created_at", "2024-07-27 07:27:36.099055"], ["updated_at", "2024-07-27 07:27:36.099055"], ["first_name", "Gayle"], ["last_name", "Prosacco"], ["description", "Non cumque repellendus iure."], ["email", "bernie.skiles@mayer-moore.test"], ["age", 77]]
+  [1m[36mTRANSACTION (94.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (1.2ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "South Delisa"], ["created_at", "2024-07-27 07:27:36.206891"], ["updated_at", "2024-07-27 07:27:36.206891"], ["zip_code", "45607"]]
+  [1m[36mTRANSACTION (43.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "logan_raynor@shields-haag.example"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "created_at", "updated_at", "first_name", "last_name", "description", "email", "age") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["city_id", 57], ["created_at", "2024-07-27 07:27:36.282614"], ["updated_at", "2024-07-27 07:27:36.282614"], ["first_name", "Benny"], ["last_name", "Kulas"], ["description", "A facere quas consequatur."], ["email", "logan_raynor@shields-haag.example"], ["age", 62]]
+  [1m[36mTRANSACTION (77.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (1.1ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Hegmannbury"], ["created_at", "2024-07-27 07:27:36.371920"], ["updated_at", "2024-07-27 07:27:36.371920"], ["zip_code", "25972"]]
+  [1m[36mTRANSACTION (164.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dick@leuschke.example"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "created_at", "updated_at", "first_name", "last_name", "description", "email", "age") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["city_id", 58], ["created_at", "2024-07-27 07:27:36.564549"], ["updated_at", "2024-07-27 07:27:36.564549"], ["first_name", "Evelyn"], ["last_name", "Labadie"], ["description", "Sint error et consequatur."], ["email", "dick@leuschke.example"], ["age", 36]]
+  [1m[36mTRANSACTION (86.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (1.2ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Gerlachton"], ["created_at", "2024-07-27 07:27:36.659757"], ["updated_at", "2024-07-27 07:27:36.659757"], ["zip_code", "49972-2241"]]
+  [1m[36mTRANSACTION (37.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "myriam@herzog-runolfsdottir.test"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "created_at", "updated_at", "first_name", "last_name", "description", "email", "age") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["city_id", 59], ["created_at", "2024-07-27 07:27:36.717809"], ["updated_at", "2024-07-27 07:27:36.717809"], ["first_name", "Kirby"], ["last_name", "Dare"], ["description", "Explicabo odit non excepturi."], ["email", "myriam@herzog-runolfsdottir.test"], ["age", 67]]
+  [1m[36mTRANSACTION (126.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (1.2ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Goldnerburgh"], ["created_at", "2024-07-27 07:27:36.852512"], ["updated_at", "2024-07-27 07:27:36.852512"], ["zip_code", "76607-3586"]]
+  [1m[36mTRANSACTION (131.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bret@effertz-boyle.example"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "created_at", "updated_at", "first_name", "last_name", "description", "email", "age") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["city_id", 60], ["created_at", "2024-07-27 07:27:37.053330"], ["updated_at", "2024-07-27 07:27:37.053330"], ["first_name", "Cristin"], ["last_name", "Weimann"], ["description", "Accusantium minima unde optio."], ["email", "bret@effertz-boyle.example"], ["age", 48]]
+  [1m[36mTRANSACTION (159.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (1.1ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Karenburgh"], ["created_at", "2024-07-27 07:27:37.225615"], ["updated_at", "2024-07-27 07:27:37.225615"], ["zip_code", "44278"]]
+  [1m[36mTRANSACTION (111.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (1.9ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Wenonaton"], ["created_at", "2024-07-27 07:27:37.353827"], ["updated_at", "2024-07-27 07:27:37.353827"], ["zip_code", "61902"]]
+  [1m[36mTRANSACTION (311.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (1.0ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Lake Janina"], ["created_at", "2024-07-27 07:27:37.685322"], ["updated_at", "2024-07-27 07:27:37.685322"], ["zip_code", "26627-7535"]]
+  [1m[36mTRANSACTION (135.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (1.3ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Terryfurt"], ["created_at", "2024-07-27 07:27:37.832716"], ["updated_at", "2024-07-27 07:27:37.832716"], ["zip_code", "63094"]]
+  [1m[36mTRANSACTION (71.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (1.7ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Lake Karina"], ["created_at", "2024-07-27 07:27:37.922402"], ["updated_at", "2024-07-27 07:27:37.922402"], ["zip_code", "86936"]]
+  [1m[36mTRANSACTION (43.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (1.2ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Port Sid"], ["created_at", "2024-07-27 07:27:37.985192"], ["updated_at", "2024-07-27 07:27:37.985192"], ["zip_code", "47374"]]
+  [1m[36mTRANSACTION (171.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (1.1ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Port Cary"], ["created_at", "2024-07-27 07:27:38.175348"], ["updated_at", "2024-07-27 07:27:38.175348"], ["zip_code", "78087"]]
+  [1m[36mTRANSACTION (26.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (1.3ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "West Junior"], ["created_at", "2024-07-27 07:27:38.218846"], ["updated_at", "2024-07-27 07:27:38.218846"], ["zip_code", "13687-2316"]]
+  [1m[36mTRANSACTION (96.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.9ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "North Richard"], ["created_at", "2024-07-27 07:27:38.334310"], ["updated_at", "2024-07-27 07:27:38.334310"], ["zip_code", "11864-0611"]]
+  [1m[36mTRANSACTION (47.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (1.2ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Bernadetteport"], ["created_at", "2024-07-27 07:27:38.398210"], ["updated_at", "2024-07-27 07:27:38.398210"], ["zip_code", "76085"]]
+  [1m[36mTRANSACTION (41.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (591.9ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Sit consequatur voluptas qui."], ["content", "At atque provident. Qui quo ut. Qui placeat expedita."], ["user_id", 16], ["created_at", "2024-07-27 07:27:38.783545"], ["updated_at", "2024-07-27 07:27:38.783545"]]
+  [1m[36mTRANSACTION (164.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.6ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Ipsam ut voluptas corporis."], ["content", "Alias dolorem amet. Saepe consequatur modi. Vel perferendis molestiae."], ["user_id", 30], ["created_at", "2024-07-27 07:27:39.558403"], ["updated_at", "2024-07-27 07:27:39.558403"]]
+  [1m[36mTRANSACTION (67.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (1.2ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Perferendis sed quam ipsam."], ["content", "Adipisci eaque perspiciatis. Necessitatibus cupiditate nulla. Accusantium molestiae et."], ["user_id", 19], ["created_at", "2024-07-27 07:27:39.644325"], ["updated_at", "2024-07-27 07:27:39.644325"]]
+  [1m[36mTRANSACTION (35.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (1.3ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "In sint hic quae."], ["content", "Atque voluptatem dolorem. Repudiandae aperiam quo. Ducimus numquam officiis."], ["user_id", 24], ["created_at", "2024-07-27 07:27:39.697036"], ["updated_at", "2024-07-27 07:27:39.697036"]]
+  [1m[36mTRANSACTION (260.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (117.3ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Impedit voluptatem sed et."], ["content", "Animi voluptatem velit. Vel veritatis alias. Eveniet ipsa hic."], ["user_id", 16], ["created_at", "2024-07-27 07:27:39.988927"], ["updated_at", "2024-07-27 07:27:39.988927"]]
+  [1m[36mTRANSACTION (32.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.9ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Qui saepe cum quia."], ["content", "Dolorem quae eos. Provident doloribus neque. Non pariatur temporibus."], ["user_id", 19], ["created_at", "2024-07-27 07:27:40.154641"], ["updated_at", "2024-07-27 07:27:40.154641"]]
+  [1m[36mTRANSACTION (132.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.5ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Unde aut quia in."], ["content", "Doloremque et nihil. Doloremque voluptatem tempora. Unde omnis tenetur."], ["user_id", 6], ["created_at", "2024-07-27 07:27:40.299810"], ["updated_at", "2024-07-27 07:27:40.299810"]]
+  [1m[36mTRANSACTION (40.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.5ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Consequatur facere quo reprehenderit."], ["content", "Illo est natus. Unde enim quasi. Et quaerat sequi."], ["user_id", 7], ["created_at", "2024-07-27 07:27:40.353533"], ["updated_at", "2024-07-27 07:27:40.353533"]]
+  [1m[36mTRANSACTION (133.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (1.2ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Doloribus nobis et minima."], ["content", "Qui impedit rem. Qui id fugiat. Laboriosam rerum molestiae."], ["user_id", 29], ["created_at", "2024-07-27 07:27:40.499599"], ["updated_at", "2024-07-27 07:27:40.499599"]]
+  [1m[36mTRANSACTION (99.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (1.3ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Tenetur ipsam dolores est."], ["content", "Explicabo debitis ullam. Inventore enim id. Libero reprehenderit qui."], ["user_id", 27], ["created_at", "2024-07-27 07:27:40.806523"], ["updated_at", "2024-07-27 07:27:40.806523"]]
+  [1m[36mTRANSACTION (105.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (1.3ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Ipsa sint earum quia."], ["content", "Rem ratione commodi. Officiis sint dignissimos. Est et cumque."], ["user_id", 23], ["created_at", "2024-07-27 07:27:40.938057"], ["updated_at", "2024-07-27 07:27:40.938057"]]
+  [1m[36mTRANSACTION (155.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (107.3ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Repellendus nisi debitis in."], ["content", "Qui quos aperiam. Qui ut commodi. Aut nisi consequatur."], ["user_id", 28], ["created_at", "2024-07-27 07:27:41.119370"], ["updated_at", "2024-07-27 07:27:41.119370"]]
+  [1m[36mTRANSACTION (123.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (63.4ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Earum nulla in est."], ["content", "Deleniti consequatur quia. Ratione asperiores eius. Reprehenderit aspernatur quaerat."], ["user_id", 21], ["created_at", "2024-07-27 07:27:41.374516"], ["updated_at", "2024-07-27 07:27:41.374516"]]
+  [1m[36mTRANSACTION (415.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (1.2ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Nobis vel omnis voluptates."], ["content", "Est impedit in. Neque labore cupiditate. Necessitatibus saepe aut."], ["user_id", 3], ["created_at", "2024-07-27 07:27:41.876928"], ["updated_at", "2024-07-27 07:27:41.876928"]]
+  [1m[36mTRANSACTION (47.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (1.6ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Itaque modi quia consequatur."], ["content", "Eum tenetur occaecati. Molestias a laboriosam. Nobis dolores qui."], ["user_id", 11], ["created_at", "2024-07-27 07:27:41.946025"], ["updated_at", "2024-07-27 07:27:41.946025"]]
+  [1m[36mTRANSACTION (34.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (146.6ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Libero nihil ex est."], ["content", "Qui tempora dignissimos. Sed sit dolor. Quod dolorum dolorem."], ["user_id", 18], ["created_at", "2024-07-27 07:27:42.010613"], ["updated_at", "2024-07-27 07:27:42.010613"]]
+  [1m[36mTRANSACTION (28.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (1.3ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Et iste non soluta."], ["content", "Voluptate excepturi doloribus. Et illo voluptate. Possimus corrupti exercitationem."], ["user_id", 29], ["created_at", "2024-07-27 07:27:42.212100"], ["updated_at", "2024-07-27 07:27:42.212100"]]
+  [1m[36mTRANSACTION (171.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (1.3ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Incidunt sed sequi iure."], ["content", "Aut quia minima. Reiciendis nam quis. Praesentium soluta dolorum."], ["user_id", 27], ["created_at", "2024-07-27 07:27:42.413491"], ["updated_at", "2024-07-27 07:27:42.413491"]]
+  [1m[36mTRANSACTION (114.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (100.1ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Excepturi nesciunt vero rerum."], ["content", "Magni blanditiis placeat. Quo sunt id. Porro numquam rerum."], ["user_id", 26], ["created_at", "2024-07-27 07:27:42.554771"], ["updated_at", "2024-07-27 07:27:42.554771"]]
+  [1m[36mTRANSACTION (258.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (1.3ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Et corporis voluptatem reprehenderit."], ["content", "Voluptate eaque quisquam. Tempore et ipsa. Ipsam voluptate sint."], ["user_id", 13], ["created_at", "2024-07-27 07:27:42.939647"], ["updated_at", "2024-07-27 07:27:42.939647"]]
+  [1m[36mTRANSACTION (61.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Create (220.4ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "tempore"], ["created_at", "2024-07-27 07:27:43.178211"], ["updated_at", "2024-07-27 07:27:43.178211"]]
+  [1m[36mTRANSACTION (52.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Create (1.1ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "dolorem"], ["created_at", "2024-07-27 07:27:43.465430"], ["updated_at", "2024-07-27 07:27:43.465430"]]
+  [1m[36mTRANSACTION (24.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Create (1.0ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "aut"], ["created_at", "2024-07-27 07:27:43.505989"], ["updated_at", "2024-07-27 07:27:43.505989"]]
+  [1m[36mTRANSACTION (57.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Create (1.0ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "similique"], ["created_at", "2024-07-27 07:27:43.579802"], ["updated_at", "2024-07-27 07:27:43.579802"]]
+  [1m[36mTRANSACTION (32.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Create (1.0ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "exercitationem"], ["created_at", "2024-07-27 07:27:43.627389"], ["updated_at", "2024-07-27 07:27:43.627389"]]
+  [1m[36mTRANSACTION (57.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Create (88.7ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "a"], ["created_at", "2024-07-27 07:27:43.700953"], ["updated_at", "2024-07-27 07:27:43.700953"]]
+  [1m[36mTRANSACTION (18.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Create (1.1ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "qui"], ["created_at", "2024-07-27 07:27:43.820314"], ["updated_at", "2024-07-27 07:27:43.820314"]]
+  [1m[36mTRANSACTION (17.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Create (0.4ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "nostrum"], ["created_at", "2024-07-27 07:27:43.850144"], ["updated_at", "2024-07-27 07:27:43.850144"]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Create (0.6ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "et"], ["created_at", "2024-07-27 07:27:43.859231"], ["updated_at", "2024-07-27 07:27:43.859231"]]
+  [1m[36mTRANSACTION (13.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Create (0.5ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "ut"], ["created_at", "2024-07-27 07:27:43.881127"], ["updated_at", "2024-07-27 07:27:43.881127"]]
+  [1m[36mTRANSACTION (26.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mGossip Load (1.1ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (1.1ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "North Allanberg"], ["created_at", "2024-07-27 07:39:17.461672"], ["updated_at", "2024-07-27 07:39:17.461672"], ["zip_code", "39591-8115"]]
+  [1m[36mTRANSACTION (15.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kasey@powlowski.example"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "created_at", "updated_at", "first_name", "last_name", "description", "email", "age") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["city_id", 71], ["created_at", "2024-07-27 07:39:17.517008"], ["updated_at", "2024-07-27 07:39:17.517008"], ["first_name", "Kasie"], ["last_name", "Adams"], ["description", "Reprehenderit id ut sint."], ["email", "kasey@powlowski.example"], ["age", 62]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.5ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Beauberg"], ["created_at", "2024-07-27 07:39:17.524012"], ["updated_at", "2024-07-27 07:39:17.524012"], ["zip_code", "61212-0911"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "samual@beahan.test"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "created_at", "updated_at", "first_name", "last_name", "description", "email", "age") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["city_id", 72], ["created_at", "2024-07-27 07:39:17.538587"], ["updated_at", "2024-07-27 07:39:17.538587"], ["first_name", "Chantal"], ["last_name", "Klein"], ["description", "Aut voluptas quia qui."], ["email", "samual@beahan.test"], ["age", 66]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.5ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Lake Kermit"], ["created_at", "2024-07-27 07:39:17.544091"], ["updated_at", "2024-07-27 07:39:17.544091"], ["zip_code", "86251-6882"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kelly@bartoletti-yost.test"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "created_at", "updated_at", "first_name", "last_name", "description", "email", "age") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["city_id", 73], ["created_at", "2024-07-27 07:39:17.557968"], ["updated_at", "2024-07-27 07:39:17.557968"], ["first_name", "Virgil"], ["last_name", "Walker"], ["description", "Totam quam est et."], ["email", "kelly@bartoletti-yost.test"], ["age", 83]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.6ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "West Aliciaburgh"], ["created_at", "2024-07-27 07:39:17.564229"], ["updated_at", "2024-07-27 07:39:17.564229"], ["zip_code", "04809"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "henry_kohler@roberts.test"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "created_at", "updated_at", "first_name", "last_name", "description", "email", "age") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["city_id", 74], ["created_at", "2024-07-27 07:39:17.577177"], ["updated_at", "2024-07-27 07:39:17.577177"], ["first_name", "Awilda"], ["last_name", "Kautzer"], ["description", "Excepturi similique molestias aspernatur."], ["email", "henry_kohler@roberts.test"], ["age", 79]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.5ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "South Percy"], ["created_at", "2024-07-27 07:39:17.582957"], ["updated_at", "2024-07-27 07:39:17.582957"], ["zip_code", "61288"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jazmin_adams@okeefe.test"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "created_at", "updated_at", "first_name", "last_name", "description", "email", "age") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["city_id", 75], ["created_at", "2024-07-27 07:39:17.595026"], ["updated_at", "2024-07-27 07:39:17.595026"], ["first_name", "Nicholas"], ["last_name", "Beahan"], ["description", "Dolorem occaecati placeat aut."], ["email", "jazmin_adams@okeefe.test"], ["age", 33]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.6ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Jenkinsfurt"], ["created_at", "2024-07-27 07:39:17.617291"], ["updated_at", "2024-07-27 07:39:17.617291"], ["zip_code", "77103-2573"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "eugenio.blick@erdman.test"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "created_at", "updated_at", "first_name", "last_name", "description", "email", "age") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["city_id", 76], ["created_at", "2024-07-27 07:39:17.631548"], ["updated_at", "2024-07-27 07:39:17.631548"], ["first_name", "Donnell"], ["last_name", "Dickens"], ["description", "Vero quos quod voluptas."], ["email", "eugenio.blick@erdman.test"], ["age", 47]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.5ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Franeckiburgh"], ["created_at", "2024-07-27 07:39:17.639738"], ["updated_at", "2024-07-27 07:39:17.639738"], ["zip_code", "80572-6081"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "deon@blick.example"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "created_at", "updated_at", "first_name", "last_name", "description", "email", "age") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["city_id", 77], ["created_at", "2024-07-27 07:39:17.654082"], ["updated_at", "2024-07-27 07:39:17.654082"], ["first_name", "Del"], ["last_name", "Funk"], ["description", "Deserunt magni cupiditate consectetur."], ["email", "deon@blick.example"], ["age", 24]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (29.4ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Bartolettiview"], ["created_at", "2024-07-27 07:39:17.661465"], ["updated_at", "2024-07-27 07:39:17.661465"], ["zip_code", "36917-4086"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "troy_champlin@kertzmann.test"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "created_at", "updated_at", "first_name", "last_name", "description", "email", "age") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["city_id", 78], ["created_at", "2024-07-27 07:39:17.705179"], ["updated_at", "2024-07-27 07:39:17.705179"], ["first_name", "Venetta"], ["last_name", "Powlowski"], ["description", "Omnis sint dolorem voluptate."], ["email", "troy_champlin@kertzmann.test"], ["age", 77]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.6ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Kohlerside"], ["created_at", "2024-07-27 07:39:17.711910"], ["updated_at", "2024-07-27 07:39:17.711910"], ["zip_code", "02545-9397"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "magaret@kling.test"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "created_at", "updated_at", "first_name", "last_name", "description", "email", "age") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["city_id", 79], ["created_at", "2024-07-27 07:39:17.726401"], ["updated_at", "2024-07-27 07:39:17.726401"], ["first_name", "Jalisa"], ["last_name", "Ratke"], ["description", "Ad debitis dolore sed."], ["email", "magaret@kling.test"], ["age", 32]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.6ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "New Errolport"], ["created_at", "2024-07-27 07:39:17.732153"], ["updated_at", "2024-07-27 07:39:17.732153"], ["zip_code", "55744-2228"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "reatha.mertz@rempel-renner.test"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "created_at", "updated_at", "first_name", "last_name", "description", "email", "age") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["city_id", 80], ["created_at", "2024-07-27 07:39:17.746421"], ["updated_at", "2024-07-27 07:39:17.746421"], ["first_name", "Shenita"], ["last_name", "Deckow"], ["description", "Occaecati voluptatum odio provident."], ["email", "reatha.mertz@rempel-renner.test"], ["age", 70]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.5ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "New Stephanstad"], ["created_at", "2024-07-27 07:39:17.753478"], ["updated_at", "2024-07-27 07:39:17.753478"], ["zip_code", "82191-1203"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.8ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Andreachester"], ["created_at", "2024-07-27 07:39:17.760836"], ["updated_at", "2024-07-27 07:39:17.760836"], ["zip_code", "51246-6758"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.6ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Willview"], ["created_at", "2024-07-27 07:39:17.772647"], ["updated_at", "2024-07-27 07:39:17.772647"], ["zip_code", "98367-0243"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.7ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Isaiasborough"], ["created_at", "2024-07-27 07:39:17.780681"], ["updated_at", "2024-07-27 07:39:17.780681"], ["zip_code", "76307-1022"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.5ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Bruenburgh"], ["created_at", "2024-07-27 07:39:17.789531"], ["updated_at", "2024-07-27 07:39:17.789531"], ["zip_code", "86187-7442"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.6ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Port Lubaport"], ["created_at", "2024-07-27 07:39:17.796789"], ["updated_at", "2024-07-27 07:39:17.796789"], ["zip_code", "43377"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.6ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Jeannieville"], ["created_at", "2024-07-27 07:39:17.805244"], ["updated_at", "2024-07-27 07:39:17.805244"], ["zip_code", "68223-6816"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.9ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "New Chris"], ["created_at", "2024-07-27 07:39:17.813360"], ["updated_at", "2024-07-27 07:39:17.813360"], ["zip_code", "07844-0237"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.4ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "East Lashonda"], ["created_at", "2024-07-27 07:39:17.822032"], ["updated_at", "2024-07-27 07:39:17.822032"], ["zip_code", "16017"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.5ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Aguedaview"], ["created_at", "2024-07-27 07:39:17.828813"], ["updated_at", "2024-07-27 07:39:17.828813"], ["zip_code", "03327"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (1.5ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Modi rerum dicta debitis."], ["content", "Dignissimos ratione est. Sunt voluptas at. Quis ea eveniet."], ["user_id", 31], ["created_at", "2024-07-27 07:39:17.857355"], ["updated_at", "2024-07-27 07:39:17.857355"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.6ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Sint modi qui labore."], ["content", "Quia dignissimos reprehenderit. Nam vitae voluptas. Et perspiciatis voluptatum."], ["user_id", 26], ["created_at", "2024-07-27 07:39:17.870111"], ["updated_at", "2024-07-27 07:39:17.870111"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.8ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Cupiditate sed est facere."], ["content", "Quaerat dolores tempora. Quos rerum id. Debitis est cupiditate."], ["user_id", 3], ["created_at", "2024-07-27 07:39:17.880460"], ["updated_at", "2024-07-27 07:39:17.880460"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (1.1ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Voluptas minus exercitationem incidunt."], ["content", "In ea enim. Quos odio quia. Quasi quisquam esse."], ["user_id", 19], ["created_at", "2024-07-27 07:39:17.895601"], ["updated_at", "2024-07-27 07:39:17.895601"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.7ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Voluptates numquam et voluptatem."], ["content", "Eos voluptatum id. Est incidunt cum. Corrupti et nisi."], ["user_id", 36], ["created_at", "2024-07-27 07:39:17.908631"], ["updated_at", "2024-07-27 07:39:17.908631"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.8ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Corrupti repellat illo consequatur."], ["content", "Hic ea ut. Perspiciatis labore ut. Natus consequatur porro."], ["user_id", 6], ["created_at", "2024-07-27 07:39:17.921196"], ["updated_at", "2024-07-27 07:39:17.921196"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.5ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Eveniet itaque et officiis."], ["content", "Id molestias eos. Qui omnis aut. Ut rerum omnis."], ["user_id", 18], ["created_at", "2024-07-27 07:39:17.934492"], ["updated_at", "2024-07-27 07:39:17.934492"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.7ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Tempore aut et ut."], ["content", "Facere iusto praesentium. Placeat molestiae fugit. Error id facere."], ["user_id", 16], ["created_at", "2024-07-27 07:39:17.946392"], ["updated_at", "2024-07-27 07:39:17.946392"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.8ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Voluptatem nihil harum sunt."], ["content", "Cupiditate sint veritatis. Ratione aut ut. Tenetur explicabo ex."], ["user_id", 27], ["created_at", "2024-07-27 07:39:17.957986"], ["updated_at", "2024-07-27 07:39:17.957986"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.5ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Id et nam mollitia."], ["content", "Pariatur eveniet sapiente. Eos aspernatur qui. Vitae expedita ut."], ["user_id", 21], ["created_at", "2024-07-27 07:39:17.970386"], ["updated_at", "2024-07-27 07:39:17.970386"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.5ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "At suscipit asperiores quis."], ["content", "Totam et non. Qui neque sed. Ut exercitationem ipsam."], ["user_id", 17], ["created_at", "2024-07-27 07:39:17.980167"], ["updated_at", "2024-07-27 07:39:17.980167"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.5ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Ex aliquid nobis est."], ["content", "Dolores incidunt voluptatem. Id incidunt dignissimos. Fugit ab quo."], ["user_id", 29], ["created_at", "2024-07-27 07:39:17.989586"], ["updated_at", "2024-07-27 07:39:17.989586"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.6ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Consequatur possimus recusandae non."], ["content", "Consequatur ipsum ut. Atque nulla corporis. Eveniet ut aliquid."], ["user_id", 36], ["created_at", "2024-07-27 07:39:17.999691"], ["updated_at", "2024-07-27 07:39:17.999691"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.7ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Eos molestiae veritatis explicabo."], ["content", "A aspernatur hic. Earum accusantium animi. Perferendis repellat illum."], ["user_id", 33], ["created_at", "2024-07-27 07:39:18.012358"], ["updated_at", "2024-07-27 07:39:18.012358"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (1.0ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Explicabo eaque est veritatis."], ["content", "Officiis quo ipsam. Atque mollitia similique. Magnam voluptas aut."], ["user_id", 40], ["created_at", "2024-07-27 07:39:18.024579"], ["updated_at", "2024-07-27 07:39:18.024579"]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.5ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Ullam earum illum perspiciatis."], ["content", "Sed veniam quae. Explicabo molestias nihil. Laboriosam aut consectetur."], ["user_id", 34], ["created_at", "2024-07-27 07:39:18.038695"], ["updated_at", "2024-07-27 07:39:18.038695"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.7ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Ea quo qui numquam."], ["content", "Aliquid repudiandae qui. Voluptatum consequatur excepturi. Cum at delectus."], ["user_id", 40], ["created_at", "2024-07-27 07:39:18.050286"], ["updated_at", "2024-07-27 07:39:18.050286"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.8ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Voluptatum quod minima eaque."], ["content", "Atque error aut. Accusantium aut placeat. Inventore quam alias."], ["user_id", 22], ["created_at", "2024-07-27 07:39:18.062615"], ["updated_at", "2024-07-27 07:39:18.062615"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.5ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Illo iure mollitia consequatur."], ["content", "Hic dolor adipisci. Officiis incidunt laudantium. Et repellat magni."], ["user_id", 11], ["created_at", "2024-07-27 07:39:18.075253"], ["updated_at", "2024-07-27 07:39:18.075253"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.6ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Dolores iste non fuga."], ["content", "Nihil aut autem. Odio illum inventore. Quasi non est."], ["user_id", 32], ["created_at", "2024-07-27 07:39:18.086890"], ["updated_at", "2024-07-27 07:39:18.086890"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Create (0.8ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "magnam"], ["created_at", "2024-07-27 07:39:18.107799"], ["updated_at", "2024-07-27 07:39:18.107799"]]
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Create (0.5ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "accusamus"], ["created_at", "2024-07-27 07:39:18.120684"], ["updated_at", "2024-07-27 07:39:18.120684"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Create (0.6ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "sint"], ["created_at", "2024-07-27 07:39:18.127690"], ["updated_at", "2024-07-27 07:39:18.127690"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Create (0.6ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "mollitia"], ["created_at", "2024-07-27 07:39:18.135423"], ["updated_at", "2024-07-27 07:39:18.135423"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Create (0.8ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "atque"], ["created_at", "2024-07-27 07:39:18.142464"], ["updated_at", "2024-07-27 07:39:18.142464"]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Create (0.5ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "qui"], ["created_at", "2024-07-27 07:39:18.155411"], ["updated_at", "2024-07-27 07:39:18.155411"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Create (0.6ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "dolorem"], ["created_at", "2024-07-27 07:39:18.162160"], ["updated_at", "2024-07-27 07:39:18.162160"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Create (0.7ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "ipsam"], ["created_at", "2024-07-27 07:39:18.170418"], ["updated_at", "2024-07-27 07:39:18.170418"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Create (0.6ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "delectus"], ["created_at", "2024-07-27 07:39:18.177925"], ["updated_at", "2024-07-27 07:39:18.177925"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Create (0.4ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "quae"], ["created_at", "2024-07-27 07:39:18.185905"], ["updated_at", "2024-07-27 07:39:18.185905"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mGossip Load (0.7ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[35m (40.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6538452784775640015)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (15.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(6538452784775640015)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.9ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Legrosland"], ["created_at", "2024-07-27 07:44:55.434167"], ["updated_at", "2024-07-27 07:44:55.434167"], ["zip_code", "16724-6742"]]
+  [1m[36mTRANSACTION (25.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "pat_marvin@mertz-predovic.example"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "created_at", "updated_at", "first_name", "last_name", "description", "email", "age") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["city_id", 91], ["created_at", "2024-07-27 07:44:55.500571"], ["updated_at", "2024-07-27 07:44:55.500571"], ["first_name", "Melany"], ["last_name", "Deckow"], ["description", "Reiciendis quasi quae iure."], ["email", "pat_marvin@mertz-predovic.example"], ["age", 72]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.6ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "East Gustavoview"], ["created_at", "2024-07-27 07:44:55.506963"], ["updated_at", "2024-07-27 07:44:55.506963"], ["zip_code", "31505-8036"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dee@altenwerth.test"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "created_at", "updated_at", "first_name", "last_name", "description", "email", "age") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["city_id", 92], ["created_at", "2024-07-27 07:44:55.521285"], ["updated_at", "2024-07-27 07:44:55.521285"], ["first_name", "Marissa"], ["last_name", "Halvorson"], ["description", "Et non eius ipsam."], ["email", "dee@altenwerth.test"], ["age", 43]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.4ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Noelfurt"], ["created_at", "2024-07-27 07:44:55.527878"], ["updated_at", "2024-07-27 07:44:55.527878"], ["zip_code", "81922"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "misha@armstrong.example"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "created_at", "updated_at", "first_name", "last_name", "description", "email", "age") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["city_id", 93], ["created_at", "2024-07-27 07:44:55.539914"], ["updated_at", "2024-07-27 07:44:55.539914"], ["first_name", "Dennise"], ["last_name", "Kemmer"], ["description", "Dolor minima ex est."], ["email", "misha@armstrong.example"], ["age", 78]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.6ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Suanneburgh"], ["created_at", "2024-07-27 07:44:55.545786"], ["updated_at", "2024-07-27 07:44:55.545786"], ["zip_code", "09919-6052"]]
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mose.oconnell@smitham-erdman.test"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "created_at", "updated_at", "first_name", "last_name", "description", "email", "age") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["city_id", 94], ["created_at", "2024-07-27 07:44:55.561566"], ["updated_at", "2024-07-27 07:44:55.561566"], ["first_name", "Monika"], ["last_name", "Deckow"], ["description", "Dolores dolorem molestiae id."], ["email", "mose.oconnell@smitham-erdman.test"], ["age", 87]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (1.3ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Danillebury"], ["created_at", "2024-07-27 07:44:55.568337"], ["updated_at", "2024-07-27 07:44:55.568337"], ["zip_code", "75783-4385"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "hugo.ruecker@daniel.test"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "created_at", "updated_at", "first_name", "last_name", "description", "email", "age") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["city_id", 95], ["created_at", "2024-07-27 07:44:55.583956"], ["updated_at", "2024-07-27 07:44:55.583956"], ["first_name", "Hiroko"], ["last_name", "Reilly"], ["description", "Vel voluptas mollitia animi."], ["email", "hugo.ruecker@daniel.test"], ["age", 40]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.6ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Lyndiamouth"], ["created_at", "2024-07-27 07:44:55.589635"], ["updated_at", "2024-07-27 07:44:55.589635"], ["zip_code", "08866"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "brock.rutherford@ernser.test"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "created_at", "updated_at", "first_name", "last_name", "description", "email", "age") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["city_id", 96], ["created_at", "2024-07-27 07:44:55.620100"], ["updated_at", "2024-07-27 07:44:55.620100"], ["first_name", "Devorah"], ["last_name", "Nitzsche"], ["description", "Velit recusandae eos dolor."], ["email", "brock.rutherford@ernser.test"], ["age", 33]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.5ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Keirafort"], ["created_at", "2024-07-27 07:44:55.626292"], ["updated_at", "2024-07-27 07:44:55.626292"], ["zip_code", "75301-8243"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sigrid.luettgen@reichel-wehner.test"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "created_at", "updated_at", "first_name", "last_name", "description", "email", "age") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["city_id", 97], ["created_at", "2024-07-27 07:44:55.640975"], ["updated_at", "2024-07-27 07:44:55.640975"], ["first_name", "Jonelle"], ["last_name", "Prosacco"], ["description", "Dolorum totam quam labore."], ["email", "sigrid.luettgen@reichel-wehner.test"], ["age", 30]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.5ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "East Lettie"], ["created_at", "2024-07-27 07:44:55.647370"], ["updated_at", "2024-07-27 07:44:55.647370"], ["zip_code", "45695"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jim@bechtelar.test"], ["LIMIT", 1]]
+  [1m[36mUser Create (2.0ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "created_at", "updated_at", "first_name", "last_name", "description", "email", "age") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["city_id", 98], ["created_at", "2024-07-27 07:44:55.660840"], ["updated_at", "2024-07-27 07:44:55.660840"], ["first_name", "Jerri"], ["last_name", "Abbott"], ["description", "Assumenda asperiores quidem et."], ["email", "jim@bechtelar.test"], ["age", 29]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.5ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Keeblerfurt"], ["created_at", "2024-07-27 07:44:55.668376"], ["updated_at", "2024-07-27 07:44:55.668376"], ["zip_code", "98278-4757"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jonell@crist-fritsch.example"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "created_at", "updated_at", "first_name", "last_name", "description", "email", "age") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["city_id", 99], ["created_at", "2024-07-27 07:44:55.681520"], ["updated_at", "2024-07-27 07:44:55.681520"], ["first_name", "Elfreda"], ["last_name", "Hansen"], ["description", "Ea minima sit qui."], ["email", "jonell@crist-fritsch.example"], ["age", 27]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.6ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "North Danniebury"], ["created_at", "2024-07-27 07:44:55.687431"], ["updated_at", "2024-07-27 07:44:55.687431"], ["zip_code", "18540-5006"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "buffy_heaney@stark-larson.test"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "created_at", "updated_at", "first_name", "last_name", "description", "email", "age") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["city_id", 100], ["created_at", "2024-07-27 07:44:55.702060"], ["updated_at", "2024-07-27 07:44:55.702060"], ["first_name", "Daina"], ["last_name", "Kerluke"], ["description", "Iusto voluptatibus nam dicta."], ["email", "buffy_heaney@stark-larson.test"], ["age", 43]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (1.1ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "South Jimmyhaven"], ["created_at", "2024-07-27 07:44:55.708804"], ["updated_at", "2024-07-27 07:44:55.708804"], ["zip_code", "83631"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.4ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Lake Dustinborough"], ["created_at", "2024-07-27 07:44:55.718565"], ["updated_at", "2024-07-27 07:44:55.718565"], ["zip_code", "32119-2743"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.7ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Reggieshire"], ["created_at", "2024-07-27 07:44:55.726816"], ["updated_at", "2024-07-27 07:44:55.726816"], ["zip_code", "40386"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.6ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Lake Tyreeton"], ["created_at", "2024-07-27 07:44:55.736967"], ["updated_at", "2024-07-27 07:44:55.736967"], ["zip_code", "68905"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.5ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Curtisshire"], ["created_at", "2024-07-27 07:44:55.746347"], ["updated_at", "2024-07-27 07:44:55.746347"], ["zip_code", "82933"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.6ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Lake Raleigh"], ["created_at", "2024-07-27 07:44:55.754464"], ["updated_at", "2024-07-27 07:44:55.754464"], ["zip_code", "42053"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.8ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "West Karrifurt"], ["created_at", "2024-07-27 07:44:55.763528"], ["updated_at", "2024-07-27 07:44:55.763528"], ["zip_code", "72130"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.5ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Port Clay"], ["created_at", "2024-07-27 07:44:55.772042"], ["updated_at", "2024-07-27 07:44:55.772042"], ["zip_code", "73557"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.5ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Port Na"], ["created_at", "2024-07-27 07:44:55.780412"], ["updated_at", "2024-07-27 07:44:55.780412"], ["zip_code", "32402"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.5ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Binsshire"], ["created_at", "2024-07-27 07:44:55.786968"], ["updated_at", "2024-07-27 07:44:55.786968"], ["zip_code", "59794-1268"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (20.1ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Soluta et ipsa distinctio."], ["content", "Sed aut magnam. Sit qui reiciendis. Fugit et nostrum."], ["user_id", 27], ["created_at", "2024-07-27 07:44:55.837571"], ["updated_at", "2024-07-27 07:44:55.837571"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.6ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Explicabo illo eaque itaque."], ["content", "Enim molestiae nesciunt. Quae nulla non. Nam rerum in."], ["user_id", 17], ["created_at", "2024-07-27 07:44:55.868886"], ["updated_at", "2024-07-27 07:44:55.868886"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.6ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Ducimus quia iure beatae."], ["content", "Repellat debitis dolore. Id hic ducimus. Aperiam omnis quisquam."], ["user_id", 10], ["created_at", "2024-07-27 07:44:55.879580"], ["updated_at", "2024-07-27 07:44:55.879580"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.9ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Aperiam reprehenderit voluptatem quia."], ["content", "Soluta ea et. Enim excepturi aut. Dolor mollitia blanditiis."], ["user_id", 2], ["created_at", "2024-07-27 07:44:55.890159"], ["updated_at", "2024-07-27 07:44:55.890159"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.7ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Amet dignissimos perspiciatis fuga."], ["content", "Saepe aliquam odit. Numquam voluptatem sit. Aspernatur animi ab."], ["user_id", 35], ["created_at", "2024-07-27 07:44:55.906137"], ["updated_at", "2024-07-27 07:44:55.906137"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.7ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Quia laborum qui saepe."], ["content", "Dolores voluptates sequi. Ut quo qui. Omnis eos eum."], ["user_id", 32], ["created_at", "2024-07-27 07:44:55.918367"], ["updated_at", "2024-07-27 07:44:55.918367"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.6ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Alias numquam quo ipsum."], ["content", "Dolorem fugiat velit. Rerum saepe culpa. Illo est occaecati."], ["user_id", 14], ["created_at", "2024-07-27 07:44:55.931228"], ["updated_at", "2024-07-27 07:44:55.931228"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.6ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Dolore dolorem quisquam quia."], ["content", "Et animi eaque. Nihil eum accusamus. Rem id mollitia."], ["user_id", 28], ["created_at", "2024-07-27 07:44:55.943085"], ["updated_at", "2024-07-27 07:44:55.943085"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.7ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Alias aut facere ut."], ["content", "Possimus quia deserunt. Ipsam at perspiciatis. Qui ea maxime."], ["user_id", 41], ["created_at", "2024-07-27 07:44:55.954583"], ["updated_at", "2024-07-27 07:44:55.954583"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.7ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Ut et odit nobis."], ["content", "Molestiae cumque laudantium. Molestiae minima molestiae. Amet ea deleniti."], ["user_id", 30], ["created_at", "2024-07-27 07:44:55.966366"], ["updated_at", "2024-07-27 07:44:55.966366"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.6ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Vel ipsum repellendus sit."], ["content", "Sed dignissimos molestiae. Eveniet dolores vel. Nihil ut dolorum."], ["user_id", 10], ["created_at", "2024-07-27 07:44:55.979017"], ["updated_at", "2024-07-27 07:44:55.979017"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.7ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Similique ab quia et."], ["content", "Est officia quaerat. Iusto dolorum non. Aut dolores eligendi."], ["user_id", 16], ["created_at", "2024-07-27 07:44:55.989267"], ["updated_at", "2024-07-27 07:44:55.989267"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.6ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Natus facere dignissimos eius."], ["content", "Perferendis autem quasi. Possimus earum natus. Temporibus placeat inventore."], ["user_id", 18], ["created_at", "2024-07-27 07:44:56.000355"], ["updated_at", "2024-07-27 07:44:56.000355"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.8ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Fugiat eveniet id sit."], ["content", "Dolorem dolores in. Ipsa ipsam nemo. Autem debitis iure."], ["user_id", 19], ["created_at", "2024-07-27 07:44:56.010915"], ["updated_at", "2024-07-27 07:44:56.010915"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.8ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Ipsam repudiandae ea reiciendis."], ["content", "Magnam doloremque molestiae. Consequatur beatae cumque. Et natus voluptatem."], ["user_id", 8], ["created_at", "2024-07-27 07:44:56.024536"], ["updated_at", "2024-07-27 07:44:56.024536"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (1.0ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Dolor optio doloribus accusantium."], ["content", "Dolor odit ratione. Commodi consectetur tempora. Porro et error."], ["user_id", 28], ["created_at", "2024-07-27 07:44:56.036874"], ["updated_at", "2024-07-27 07:44:56.036874"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.6ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Voluptatem voluptatem adipisci quas."], ["content", "Est iste voluptatem. Earum eos non. Hic suscipit a."], ["user_id", 32], ["created_at", "2024-07-27 07:44:56.050439"], ["updated_at", "2024-07-27 07:44:56.050439"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.8ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Possimus esse eum praesentium."], ["content", "Non et rem. Tempore quae ad. Est blanditiis odit."], ["user_id", 5], ["created_at", "2024-07-27 07:44:56.062099"], ["updated_at", "2024-07-27 07:44:56.062099"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.8ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Non voluptate voluptatum labore."], ["content", "Fugiat facilis ullam. Minima qui id. Quisquam ipsa numquam."], ["user_id", 45], ["created_at", "2024-07-27 07:44:56.076696"], ["updated_at", "2024-07-27 07:44:56.076696"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.7ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Unde autem laudantium doloribus."], ["content", "Sit quis corporis. Similique repellendus est. Odio pariatur voluptate."], ["user_id", 37], ["created_at", "2024-07-27 07:44:56.088500"], ["updated_at", "2024-07-27 07:44:56.088500"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Create (0.9ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "nulla"], ["created_at", "2024-07-27 07:44:56.113376"], ["updated_at", "2024-07-27 07:44:56.113376"]]
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Create (0.7ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "voluptatem"], ["created_at", "2024-07-27 07:44:56.124465"], ["updated_at", "2024-07-27 07:44:56.124465"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Create (0.4ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "odit"], ["created_at", "2024-07-27 07:44:56.133154"], ["updated_at", "2024-07-27 07:44:56.133154"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Create (0.7ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "laborum"], ["created_at", "2024-07-27 07:44:56.140355"], ["updated_at", "2024-07-27 07:44:56.140355"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Create (0.5ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "ut"], ["created_at", "2024-07-27 07:44:56.148597"], ["updated_at", "2024-07-27 07:44:56.148597"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Create (0.5ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "veritatis"], ["created_at", "2024-07-27 07:44:56.155874"], ["updated_at", "2024-07-27 07:44:56.155874"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Create (0.4ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "et"], ["created_at", "2024-07-27 07:44:56.167807"], ["updated_at", "2024-07-27 07:44:56.167807"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Create (0.8ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "impedit"], ["created_at", "2024-07-27 07:44:56.174293"], ["updated_at", "2024-07-27 07:44:56.174293"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Create (0.4ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "aliquam"], ["created_at", "2024-07-27 07:44:56.182418"], ["updated_at", "2024-07-27 07:44:56.182418"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Create (0.6ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "qui"], ["created_at", "2024-07-27 07:44:56.189571"], ["updated_at", "2024-07-27 07:44:56.189571"]]
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mGossip Load (0.8ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (67.1ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Sherrilbury"], ["created_at", "2024-07-27 07:52:45.504998"], ["updated_at", "2024-07-27 07:52:45.504998"], ["zip_code", "84301"]]
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (2.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "martine.ferry@senger.example"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "created_at", "updated_at", "first_name", "last_name", "description", "email", "age") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["city_id", 111], ["created_at", "2024-07-27 07:52:45.825639"], ["updated_at", "2024-07-27 07:52:45.825639"], ["first_name", "Sunni"], ["last_name", "Gorczany"], ["description", "Facere inventore aperiam eum."], ["email", "martine.ferry@senger.example"], ["age", 68]]
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.6ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Jaemouth"], ["created_at", "2024-07-27 07:52:45.838680"], ["updated_at", "2024-07-27 07:52:45.838680"], ["zip_code", "06250"]]
+  [1m[36mTRANSACTION (6.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "buford@vonrueden.example"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "created_at", "updated_at", "first_name", "last_name", "description", "email", "age") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["city_id", 112], ["created_at", "2024-07-27 07:52:45.863671"], ["updated_at", "2024-07-27 07:52:45.863671"], ["first_name", "Toccara"], ["last_name", "Frami"], ["description", "Occaecati non ex sint."], ["email", "buford@vonrueden.example"], ["age", 26]]
+  [1m[36mTRANSACTION (22.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (3.8ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Margetton"], ["created_at", "2024-07-27 07:52:45.895663"], ["updated_at", "2024-07-27 07:52:45.895663"], ["zip_code", "60417-3253"]]
+  [1m[36mTRANSACTION (66.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cory@williamson.example"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "created_at", "updated_at", "first_name", "last_name", "description", "email", "age") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["city_id", 113], ["created_at", "2024-07-27 07:52:45.979709"], ["updated_at", "2024-07-27 07:52:45.979709"], ["first_name", "Raymonde"], ["last_name", "Hintz"], ["description", "Et aut eos nobis."], ["email", "cory@williamson.example"], ["age", 31]]
+  [1m[36mTRANSACTION (7.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.5ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Leschmouth"], ["created_at", "2024-07-27 07:52:45.992261"], ["updated_at", "2024-07-27 07:52:45.992261"], ["zip_code", "45489"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "walker@skiles.example"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "created_at", "updated_at", "first_name", "last_name", "description", "email", "age") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["city_id", 114], ["created_at", "2024-07-27 07:52:46.009289"], ["updated_at", "2024-07-27 07:52:46.009289"], ["first_name", "Lauralee"], ["last_name", "Nienow"], ["description", "Reiciendis enim voluptatibus earum."], ["email", "walker@skiles.example"], ["age", 34]]
+  [1m[36mTRANSACTION (13.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (3.2ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Florentinohaven"], ["created_at", "2024-07-27 07:52:46.030550"], ["updated_at", "2024-07-27 07:52:46.030550"], ["zip_code", "63179"]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "duncan@heaney-hilpert.example"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "created_at", "updated_at", "first_name", "last_name", "description", "email", "age") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["city_id", 115], ["created_at", "2024-07-27 07:52:46.052183"], ["updated_at", "2024-07-27 07:52:46.052183"], ["first_name", "Amie"], ["last_name", "Barrows"], ["description", "Hic consequatur occaecati suscipit."], ["email", "duncan@heaney-hilpert.example"], ["age", 54]]
+  [1m[36mTRANSACTION (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (3.4ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Moenberg"], ["created_at", "2024-07-27 07:52:46.069370"], ["updated_at", "2024-07-27 07:52:46.069370"], ["zip_code", "09403-5914"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jonathan@walker.test"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "created_at", "updated_at", "first_name", "last_name", "description", "email", "age") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["city_id", 116], ["created_at", "2024-07-27 07:52:46.127259"], ["updated_at", "2024-07-27 07:52:46.127259"], ["first_name", "Lizabeth"], ["last_name", "Olson"], ["description", "Dolor fugit animi architecto."], ["email", "jonathan@walker.test"], ["age", 33]]
+  [1m[36mTRANSACTION (9.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (2.9ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Port Trinidad"], ["created_at", "2024-07-27 07:52:46.145273"], ["updated_at", "2024-07-27 07:52:46.145273"], ["zip_code", "25276"]]
+  [1m[36mTRANSACTION (5.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (5.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "brant@huel.test"], ["LIMIT", 1]]
+  [1m[36mUser Create (34.5ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "created_at", "updated_at", "first_name", "last_name", "description", "email", "age") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["city_id", 117], ["created_at", "2024-07-27 07:52:46.180190"], ["updated_at", "2024-07-27 07:52:46.180190"], ["first_name", "Shamika"], ["last_name", "Zboncak"], ["description", "Et est qui qui."], ["email", "brant@huel.test"], ["age", 85]]
+  [1m[36mTRANSACTION (9.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (1.3ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Connport"], ["created_at", "2024-07-27 07:52:46.232055"], ["updated_at", "2024-07-27 07:52:46.232055"], ["zip_code", "94727-4049"]]
+  [1m[36mTRANSACTION (38.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "todd@berge.test"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "created_at", "updated_at", "first_name", "last_name", "description", "email", "age") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["city_id", 118], ["created_at", "2024-07-27 07:52:46.292583"], ["updated_at", "2024-07-27 07:52:46.292583"], ["first_name", "Alfonzo"], ["last_name", "Hammes"], ["description", "Ut voluptatem dolor voluptatem."], ["email", "todd@berge.test"], ["age", 87]]
+  [1m[36mTRANSACTION (10.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.9ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Selenaburgh"], ["created_at", "2024-07-27 07:52:46.310122"], ["updated_at", "2024-07-27 07:52:46.310122"], ["zip_code", "42843"]]
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "burl@ruecker.example"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "created_at", "updated_at", "first_name", "last_name", "description", "email", "age") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["city_id", 119], ["created_at", "2024-07-27 07:52:46.330898"], ["updated_at", "2024-07-27 07:52:46.330898"], ["first_name", "Ted"], ["last_name", "Lynch"], ["description", "Voluptas magni molestiae reiciendis."], ["email", "burl@ruecker.example"], ["age", 49]]
+  [1m[36mTRANSACTION (8.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.8ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Maggioview"], ["created_at", "2024-07-27 07:52:46.347175"], ["updated_at", "2024-07-27 07:52:46.347175"], ["zip_code", "74798-6904"]]
+  [1m[36mTRANSACTION (10.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "amelia.schroeder@jerde.example"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "created_at", "updated_at", "first_name", "last_name", "description", "email", "age") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["city_id", 120], ["created_at", "2024-07-27 07:52:46.378306"], ["updated_at", "2024-07-27 07:52:46.378306"], ["first_name", "Cesar"], ["last_name", "White"], ["description", "Eligendi inventore esse laborum."], ["email", "amelia.schroeder@jerde.example"], ["age", 43]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (1.0ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "East Marty"], ["created_at", "2024-07-27 07:52:46.389562"], ["updated_at", "2024-07-27 07:52:46.389562"], ["zip_code", "73981-2976"]]
+  [1m[36mTRANSACTION (10.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (1.7ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Watsicaborough"], ["created_at", "2024-07-27 07:52:46.410066"], ["updated_at", "2024-07-27 07:52:46.410066"], ["zip_code", "19631-7149"]]
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (2.5ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "South Yolanda"], ["created_at", "2024-07-27 07:52:46.434283"], ["updated_at", "2024-07-27 07:52:46.434283"], ["zip_code", "68681-6012"]]
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (1.0ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Port Luellashire"], ["created_at", "2024-07-27 07:52:46.455748"], ["updated_at", "2024-07-27 07:52:46.455748"], ["zip_code", "21277"]]
+  [1m[36mTRANSACTION (7.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.6ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Marshallfort"], ["created_at", "2024-07-27 07:52:46.476669"], ["updated_at", "2024-07-27 07:52:46.476669"], ["zip_code", "64766-9756"]]
+  [1m[36mTRANSACTION (24.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (3.0ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "North Tyeshatown"], ["created_at", "2024-07-27 07:52:46.513468"], ["updated_at", "2024-07-27 07:52:46.513468"], ["zip_code", "92891"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (2.7ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Bunnychester"], ["created_at", "2024-07-27 07:52:46.539218"], ["updated_at", "2024-07-27 07:52:46.539218"], ["zip_code", "45644"]]
+  [1m[36mTRANSACTION (8.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.9ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Port Silasborough"], ["created_at", "2024-07-27 07:52:46.565037"], ["updated_at", "2024-07-27 07:52:46.565037"], ["zip_code", "93967-5786"]]
+  [1m[36mTRANSACTION (12.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (0.6ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Krajcikborough"], ["created_at", "2024-07-27 07:52:46.594259"], ["updated_at", "2024-07-27 07:52:46.594259"], ["zip_code", "45410-6793"]]
+  [1m[36mTRANSACTION (17.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (1.3ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Yundtview"], ["created_at", "2024-07-27 07:52:46.627095"], ["updated_at", "2024-07-27 07:52:46.627095"], ["zip_code", "10912-4725"]]
+  [1m[36mTRANSACTION (8.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (4.2ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Rerum eius error sint."], ["content", "Qui et explicabo. Qui aut facere. Quis ipsa maiores."], ["user_id", 24], ["created_at", "2024-07-27 07:52:46.837745"], ["updated_at", "2024-07-27 07:52:46.837745"]]
+  [1m[36mTRANSACTION (16.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (1.0ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Eum praesentium ut vitae."], ["content", "Commodi tempore expedita. Iusto a consectetur. Autem sit a."], ["user_id", 53], ["created_at", "2024-07-27 07:52:46.884281"], ["updated_at", "2024-07-27 07:52:46.884281"]]
+  [1m[36mTRANSACTION (23.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.7ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Assumenda dolorem rerum a."], ["content", "Tenetur quia ea. Illum maiores expedita. Eos ut aut."], ["user_id", 13], ["created_at", "2024-07-27 07:52:46.928112"], ["updated_at", "2024-07-27 07:52:46.928112"]]
+  [1m[36mTRANSACTION (4.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.7ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Eveniet possimus facilis sunt."], ["content", "Quaerat officiis necessitatibus. Quam nihil accusamus. Ipsa in fugit."], ["user_id", 45], ["created_at", "2024-07-27 07:52:46.944742"], ["updated_at", "2024-07-27 07:52:46.944742"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (1.1ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Delectus error molestiae repellendus."], ["content", "Ex corporis repellat. Qui ad minima. Quos eligendi et."], ["user_id", 17], ["created_at", "2024-07-27 07:52:46.966864"], ["updated_at", "2024-07-27 07:52:46.966864"]]
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.9ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Provident aperiam porro dicta."], ["content", "Et voluptatem aperiam. Exercitationem ea sint. Odit ut quis."], ["user_id", 51], ["created_at", "2024-07-27 07:52:46.989050"], ["updated_at", "2024-07-27 07:52:46.989050"]]
+  [1m[36mTRANSACTION (21.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.8ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Molestiae saepe aliquid consequatur."], ["content", "Vel similique quaerat. Aut sunt nam. Et consequatur veniam."], ["user_id", 57], ["created_at", "2024-07-27 07:52:47.025530"], ["updated_at", "2024-07-27 07:52:47.025530"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.7ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Hic magni quibusdam reprehenderit."], ["content", "Est sapiente delectus. Sint voluptas aut. Cumque odit error."], ["user_id", 28], ["created_at", "2024-07-27 07:52:47.040772"], ["updated_at", "2024-07-27 07:52:47.040772"]]
+  [1m[36mTRANSACTION (65.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.6ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Id itaque quia quaerat."], ["content", "Eaque aut beatae. Voluptatem nobis corrupti. Culpa facere rem."], ["user_id", 33], ["created_at", "2024-07-27 07:52:47.123666"], ["updated_at", "2024-07-27 07:52:47.123666"]]
+  [1m[36mTRANSACTION (91.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.5ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Et neque et modi."], ["content", "Quo aspernatur tempora. Quos sit molestias. Ducimus iste ullam."], ["user_id", 33], ["created_at", "2024-07-27 07:52:47.228995"], ["updated_at", "2024-07-27 07:52:47.228995"]]
+  [1m[36mTRANSACTION (4.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.8ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Ut recusandae provident atque."], ["content", "Et quae non. Eum et maiores. Consequatur cumque et."], ["user_id", 8], ["created_at", "2024-07-27 07:52:47.246832"], ["updated_at", "2024-07-27 07:52:47.246832"]]
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.5ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Nam quod animi neque."], ["content", "Ut non ad. Possimus quo tenetur. Delectus corporis distinctio."], ["user_id", 43], ["created_at", "2024-07-27 07:52:47.275425"], ["updated_at", "2024-07-27 07:52:47.275425"]]
+  [1m[36mTRANSACTION (10.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.6ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Est repudiandae quis at."], ["content", "Rerum id ut. Sed delectus fugit. Autem sit fugit."], ["user_id", 11], ["created_at", "2024-07-27 07:52:47.296511"], ["updated_at", "2024-07-27 07:52:47.296511"]]
+  [1m[36mTRANSACTION (10.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.6ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Rerum enim ea aut."], ["content", "Fuga aut et. Et quia vel. Optio et suscipit."], ["user_id", 28], ["created_at", "2024-07-27 07:52:47.325209"], ["updated_at", "2024-07-27 07:52:47.325209"]]
+  [1m[36mTRANSACTION (8.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.7ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Maxime aliquid aut est."], ["content", "Molestiae sed aliquid. Illo est et. Cum in minus."], ["user_id", 15], ["created_at", "2024-07-27 07:52:47.349710"], ["updated_at", "2024-07-27 07:52:47.349710"]]
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (6.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.8ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Est animi quam beatae."], ["content", "Ut dignissimos delectus. Sed hic dolores. Consectetur mollitia dolor."], ["user_id", 15], ["created_at", "2024-07-27 07:52:47.388839"], ["updated_at", "2024-07-27 07:52:47.388839"]]
+  [1m[36mTRANSACTION (15.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (1.3ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Beatae ullam rem natus."], ["content", "Laborum consequatur explicabo. Quisquam illo enim. Quisquam asperiores eum."], ["user_id", 4], ["created_at", "2024-07-27 07:52:47.435248"], ["updated_at", "2024-07-27 07:52:47.435248"]]
+  [1m[36mTRANSACTION (57.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.8ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Inventore ipsa iusto mollitia."], ["content", "Ullam aut expedita. Nostrum neque aut. Vel ipsam assumenda."], ["user_id", 43], ["created_at", "2024-07-27 07:52:47.514406"], ["updated_at", "2024-07-27 07:52:47.514406"]]
+  [1m[36mTRANSACTION (8.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.9ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Repellat placeat ad sit."], ["content", "Mollitia voluptate omnis. Eaque earum fugit. Earum voluptatibus nostrum."], ["user_id", 12], ["created_at", "2024-07-27 07:52:47.545954"], ["updated_at", "2024-07-27 07:52:47.545954"]]
+  [1m[36mTRANSACTION (12.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGossip Create (0.7ms)[0m  [1m[32mINSERT INTO "gossips" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Id vel mollitia enim."], ["content", "Ut ex aut. Exercitationem sed fugit. Eligendi numquam sit."], ["user_id", 39], ["created_at", "2024-07-27 07:52:47.574000"], ["updated_at", "2024-07-27 07:52:47.574000"]]
+  [1m[36mTRANSACTION (9.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Create (0.9ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "pariatur"], ["created_at", "2024-07-27 07:52:47.633545"], ["updated_at", "2024-07-27 07:52:47.633545"]]
+  [1m[36mTRANSACTION (52.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Create (1.4ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "cum"], ["created_at", "2024-07-27 07:52:47.693627"], ["updated_at", "2024-07-27 07:52:47.693627"]]
+  [1m[36mTRANSACTION (27.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Create (0.4ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "eum"], ["created_at", "2024-07-27 07:52:47.729225"], ["updated_at", "2024-07-27 07:52:47.729225"]]
+  [1m[36mTRANSACTION (23.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Create (0.7ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "id"], ["created_at", "2024-07-27 07:52:47.758491"], ["updated_at", "2024-07-27 07:52:47.758491"]]
+  [1m[36mTRANSACTION (17.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Create (0.8ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "et"], ["created_at", "2024-07-27 07:52:47.786816"], ["updated_at", "2024-07-27 07:52:47.786816"]]
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Create (1.2ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "excepturi"], ["created_at", "2024-07-27 07:52:47.804007"], ["updated_at", "2024-07-27 07:52:47.804007"]]
+  [1m[36mTRANSACTION (18.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Create (1.5ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "aut"], ["created_at", "2024-07-27 07:52:47.836141"], ["updated_at", "2024-07-27 07:52:47.836141"]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Create (2.2ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "alias"], ["created_at", "2024-07-27 07:52:47.849277"], ["updated_at", "2024-07-27 07:52:47.849277"]]
+  [1m[36mTRANSACTION (8.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Create (0.6ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "suscipit"], ["created_at", "2024-07-27 07:52:47.879860"], ["updated_at", "2024-07-27 07:52:47.879860"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Create (1.3ms)[0m  [1m[32mINSERT INTO "tags" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "dolorum"], ["created_at", "2024-07-27 07:52:47.893739"], ["updated_at", "2024-07-27 07:52:47.893739"]]
+  [1m[36mTRANSACTION (6.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGossip Load (2.0ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComment Create (117.8ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "commentable_type", "commentable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Repellendus ipsum iusto. Autem occaecati et. Porro nulla hic."], ["user_id", 20], ["commentable_type", "Gossip"], ["commentable_id", 106], ["created_at", "2024-07-27 07:52:47.984614"], ["updated_at", "2024-07-27 07:52:47.984614"]]
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGossip Load (1.0ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComment Create (0.9ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "commentable_type", "commentable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Est culpa nisi. Aut temporibus iusto. Nobis quia numquam."], ["user_id", 52], ["commentable_type", "Gossip"], ["commentable_id", 93], ["created_at", "2024-07-27 07:52:48.132460"], ["updated_at", "2024-07-27 07:52:48.132460"]]
+  [1m[36mTRANSACTION (42.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGossip Load (1.1ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComment Create (0.7ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "commentable_type", "commentable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Qui dolores laboriosam. Ut aut ratione. Cumque eum a."], ["user_id", 12], ["commentable_type", "Gossip"], ["commentable_id", 16], ["created_at", "2024-07-27 07:52:48.191623"], ["updated_at", "2024-07-27 07:52:48.191623"]]
+  [1m[36mTRANSACTION (8.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGossip Load (1.4ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComment Create (0.8ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "commentable_type", "commentable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Incidunt necessitatibus laboriosam. Dolor dolores eaque. Quod et minima."], ["user_id", 46], ["commentable_type", "Gossip"], ["commentable_id", 90], ["created_at", "2024-07-27 07:52:48.220843"], ["updated_at", "2024-07-27 07:52:48.220843"]]
+  [1m[36mTRANSACTION (93.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGossip Load (0.9ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComment Create (0.7ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "commentable_type", "commentable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Enim deserunt facere. Consequuntur aut quis. Velit id autem."], ["user_id", 58], ["commentable_type", "Gossip"], ["commentable_id", 64], ["created_at", "2024-07-27 07:52:48.331897"], ["updated_at", "2024-07-27 07:52:48.331897"]]
+  [1m[36mTRANSACTION (16.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGossip Load (0.9ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComment Create (1.3ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "commentable_type", "commentable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Deserunt molestiae quas. Quisquam expedita commodi. Et distinctio et."], ["user_id", 57], ["commentable_type", "Gossip"], ["commentable_id", 94], ["created_at", "2024-07-27 07:52:48.369579"], ["updated_at", "2024-07-27 07:52:48.369579"]]
+  [1m[36mTRANSACTION (13.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGossip Load (0.9ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComment Create (1.0ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "commentable_type", "commentable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Doloremque amet eos. Labore non similique. Iure velit et."], ["user_id", 29], ["commentable_type", "Gossip"], ["commentable_id", 65], ["created_at", "2024-07-27 07:52:48.404795"], ["updated_at", "2024-07-27 07:52:48.404795"]]
+  [1m[36mTRANSACTION (25.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGossip Load (0.9ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComment Create (1.1ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "commentable_type", "commentable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Molestiae modi laudantium. Molestias nulla et. Consequatur dolor a."], ["user_id", 28], ["commentable_type", "Gossip"], ["commentable_id", 45], ["created_at", "2024-07-27 07:52:48.449126"], ["updated_at", "2024-07-27 07:52:48.449126"]]
+  [1m[36mTRANSACTION (25.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGossip Load (1.8ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComment Create (0.7ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "commentable_type", "commentable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Ut et quos. Occaecati cupiditate qui. Ut voluptatem placeat."], ["user_id", 11], ["commentable_type", "Gossip"], ["commentable_id", 60], ["created_at", "2024-07-27 07:52:48.495608"], ["updated_at", "2024-07-27 07:52:48.495608"]]
+  [1m[36mTRANSACTION (37.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGossip Load (6.4ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[36mTRANSACTION (6.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComment Create (2.1ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "commentable_type", "commentable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Recusandae similique voluptates. Est iste beatae. Debitis ratione et."], ["user_id", 11], ["commentable_type", "Gossip"], ["commentable_id", 48], ["created_at", "2024-07-27 07:52:48.579007"], ["updated_at", "2024-07-27 07:52:48.579007"]]
+  [1m[36mTRANSACTION (29.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGossip Load (0.9ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComment Create (1.6ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "commentable_type", "commentable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Dolores nostrum nam. Fuga in fugit. Neque itaque ipsa."], ["user_id", 49], ["commentable_type", "Gossip"], ["commentable_id", 91], ["created_at", "2024-07-27 07:52:48.639133"], ["updated_at", "2024-07-27 07:52:48.639133"]]
+  [1m[36mTRANSACTION (19.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGossip Load (0.9ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComment Create (0.6ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "commentable_type", "commentable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Quis in officiis. Aliquam quia harum. Rerum quae ratione."], ["user_id", 44], ["commentable_type", "Gossip"], ["commentable_id", 96], ["created_at", "2024-07-27 07:52:48.677243"], ["updated_at", "2024-07-27 07:52:48.677243"]]
+  [1m[36mTRANSACTION (37.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGossip Load (1.5ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComment Create (1.2ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "commentable_type", "commentable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Quis hic qui. Tempore sapiente praesentium. Ut nam quis."], ["user_id", 7], ["commentable_type", "Gossip"], ["commentable_id", 36], ["created_at", "2024-07-27 07:52:48.736003"], ["updated_at", "2024-07-27 07:52:48.736003"]]
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGossip Load (2.0ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[36mTRANSACTION (11.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComment Create (0.7ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "commentable_type", "commentable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Dolorem sed cumque. Earum iure eveniet. Rerum fugit dolorem."], ["user_id", 43], ["commentable_type", "Gossip"], ["commentable_id", 116], ["created_at", "2024-07-27 07:52:48.765929"], ["updated_at", "2024-07-27 07:52:48.765929"]]
+  [1m[36mTRANSACTION (12.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGossip Load (1.4ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComment Create (0.7ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "commentable_type", "commentable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Fugiat rerum accusamus. Amet sapiente necessitatibus. Consectetur ullam natus."], ["user_id", 32], ["commentable_type", "Gossip"], ["commentable_id", 107], ["created_at", "2024-07-27 07:52:48.807578"], ["updated_at", "2024-07-27 07:52:48.807578"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGossip Load (1.1ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComment Create (1.0ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "commentable_type", "commentable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Autem assumenda et. Vel voluptatem sit. Voluptatibus iusto similique."], ["user_id", 16], ["commentable_type", "Gossip"], ["commentable_id", 95], ["created_at", "2024-07-27 07:52:48.829203"], ["updated_at", "2024-07-27 07:52:48.829203"]]
+  [1m[36mTRANSACTION (6.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGossip Load (1.6ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComment Create (0.9ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "commentable_type", "commentable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Sint qui omnis. Quibusdam quos qui. Facere id tenetur."], ["user_id", 4], ["commentable_type", "Gossip"], ["commentable_id", 57], ["created_at", "2024-07-27 07:52:48.864719"], ["updated_at", "2024-07-27 07:52:48.864719"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGossip Load (2.9ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComment Create (0.8ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "commentable_type", "commentable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Sit similique sint. Ducimus libero delectus. Quia ut labore."], ["user_id", 55], ["commentable_type", "Gossip"], ["commentable_id", 96], ["created_at", "2024-07-27 07:52:48.892104"], ["updated_at", "2024-07-27 07:52:48.892104"]]
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGossip Load (0.8ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComment Create (1.1ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "commentable_type", "commentable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Autem rerum iusto. Voluptas omnis reiciendis. Harum qui eos."], ["user_id", 26], ["commentable_type", "Gossip"], ["commentable_id", 65], ["created_at", "2024-07-27 07:52:48.917534"], ["updated_at", "2024-07-27 07:52:48.917534"]]
+  [1m[36mTRANSACTION (12.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGossip Load (1.5ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComment Create (0.6ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "commentable_type", "commentable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Eum culpa aliquam. Hic ut labore. Laudantium nisi ut."], ["user_id", 16], ["commentable_type", "Gossip"], ["commentable_id", 80], ["created_at", "2024-07-27 07:52:48.947184"], ["updated_at", "2024-07-27 07:52:48.947184"]]
+  [1m[36mTRANSACTION (10.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGossip Load (1.5ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Create (84.2ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "likeable_type", "likeable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 15], ["likeable_type", "Gossip"], ["likeable_id", 44], ["created_at", "2024-07-27 07:52:49.044338"], ["updated_at", "2024-07-27 07:52:49.044338"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGossip Load (0.9ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[36mComment Load (1.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Create (0.8ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "likeable_type", "likeable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 7], ["likeable_type", "Gossip"], ["likeable_id", 104], ["created_at", "2024-07-27 07:52:49.150298"], ["updated_at", "2024-07-27 07:52:49.150298"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGossip Load (1.0ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[36mComment Load (1.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Create (0.8ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "likeable_type", "likeable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 6], ["likeable_type", "Gossip"], ["likeable_id", 92], ["created_at", "2024-07-27 07:52:49.172862"], ["updated_at", "2024-07-27 07:52:49.172862"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGossip Load (2.0ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Create (0.7ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "likeable_type", "likeable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 46], ["likeable_type", "Comment"], ["likeable_id", 2], ["created_at", "2024-07-27 07:52:49.194541"], ["updated_at", "2024-07-27 07:52:49.194541"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGossip Load (1.0ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Create (0.8ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "likeable_type", "likeable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 30], ["likeable_type", "Gossip"], ["likeable_id", 76], ["created_at", "2024-07-27 07:52:49.217407"], ["updated_at", "2024-07-27 07:52:49.217407"]]
+  [1m[36mTRANSACTION (9.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGossip Load (0.9ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Create (1.0ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "likeable_type", "likeable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 46], ["likeable_type", "Comment"], ["likeable_id", 6], ["created_at", "2024-07-27 07:52:49.244982"], ["updated_at", "2024-07-27 07:52:49.244982"]]
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGossip Load (2.5ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[36mComment Load (2.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Create (1.1ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "likeable_type", "likeable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 44], ["likeable_type", "Comment"], ["likeable_id", 5], ["created_at", "2024-07-27 07:52:49.281606"], ["updated_at", "2024-07-27 07:52:49.281606"]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGossip Load (1.0ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Create (0.8ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "likeable_type", "likeable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 19], ["likeable_type", "Comment"], ["likeable_id", 12], ["created_at", "2024-07-27 07:52:49.308045"], ["updated_at", "2024-07-27 07:52:49.308045"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGossip Load (2.8ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[36mComment Load (4.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Create (0.8ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "likeable_type", "likeable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 28], ["likeable_type", "Gossip"], ["likeable_id", 27], ["created_at", "2024-07-27 07:52:49.346596"], ["updated_at", "2024-07-27 07:52:49.346596"]]
+  [1m[36mTRANSACTION (16.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGossip Load (3.6ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Create (1.1ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "likeable_type", "likeable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 17], ["likeable_type", "Comment"], ["likeable_id", 13], ["created_at", "2024-07-27 07:52:49.390952"], ["updated_at", "2024-07-27 07:52:49.390952"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGossip Load (0.9ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Create (1.0ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "likeable_type", "likeable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 28], ["likeable_type", "Comment"], ["likeable_id", 20], ["created_at", "2024-07-27 07:52:49.412413"], ["updated_at", "2024-07-27 07:52:49.412413"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGossip Load (1.5ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[36mComment Load (2.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Create (1.0ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "likeable_type", "likeable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 30], ["likeable_type", "Gossip"], ["likeable_id", 116], ["created_at", "2024-07-27 07:52:49.443511"], ["updated_at", "2024-07-27 07:52:49.443511"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGossip Load (0.8ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[36mComment Load (1.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Create (1.5ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "likeable_type", "likeable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 7], ["likeable_type", "Comment"], ["likeable_id", 20], ["created_at", "2024-07-27 07:52:49.474445"], ["updated_at", "2024-07-27 07:52:49.474445"]]
+  [1m[36mTRANSACTION (18.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGossip Load (3.7ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Create (0.8ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "likeable_type", "likeable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 28], ["likeable_type", "Comment"], ["likeable_id", 6], ["created_at", "2024-07-27 07:52:49.530428"], ["updated_at", "2024-07-27 07:52:49.530428"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGossip Load (2.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[36mComment Load (1.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Create (0.9ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "likeable_type", "likeable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 11], ["likeable_type", "Comment"], ["likeable_id", 4], ["created_at", "2024-07-27 07:52:49.552800"], ["updated_at", "2024-07-27 07:52:49.552800"]]
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGossip Load (3.4ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[36mComment Load (2.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Create (4.4ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "likeable_type", "likeable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 13], ["likeable_type", "Comment"], ["likeable_id", 13], ["created_at", "2024-07-27 07:52:49.591416"], ["updated_at", "2024-07-27 07:52:49.591416"]]
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGossip Load (1.2ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[36mComment Load (1.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Create (0.9ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "likeable_type", "likeable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 29], ["likeable_type", "Comment"], ["likeable_id", 7], ["created_at", "2024-07-27 07:52:49.621866"], ["updated_at", "2024-07-27 07:52:49.621866"]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGossip Load (2.8ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Create (0.7ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "likeable_type", "likeable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 44], ["likeable_type", "Gossip"], ["likeable_id", 39], ["created_at", "2024-07-27 07:52:49.651938"], ["updated_at", "2024-07-27 07:52:49.651938"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGossip Load (1.5ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Create (0.6ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "likeable_type", "likeable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 23], ["likeable_type", "Comment"], ["likeable_id", 11], ["created_at", "2024-07-27 07:52:49.673186"], ["updated_at", "2024-07-27 07:52:49.673186"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGossip Load (0.8ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Create (1.2ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "likeable_type", "likeable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 11], ["likeable_type", "Gossip"], ["likeable_id", 93], ["created_at", "2024-07-27 07:52:49.692684"], ["updated_at", "2024-07-27 07:52:49.692684"]]
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mComment Load (1.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComment Create (1.5ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "commentable_type", "commentable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Neque consequatur vel. Placeat at quaerat. Quia facilis minus."], ["user_id", 35], ["commentable_type", "Comment"], ["commentable_id", 7], ["created_at", "2024-07-27 07:52:49.723625"], ["updated_at", "2024-07-27 07:52:49.723625"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mComment Load (1.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComment Create (1.2ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "commentable_type", "commentable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Ut omnis voluptatem. Eveniet non est. Soluta tempora aspernatur."], ["user_id", 4], ["commentable_type", "Comment"], ["commentable_id", 4], ["created_at", "2024-07-27 07:52:49.743979"], ["updated_at", "2024-07-27 07:52:49.743979"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComment Create (0.7ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "commentable_type", "commentable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Nisi praesentium est. Fugiat sapiente enim. Explicabo eum recusandae."], ["user_id", 42], ["commentable_type", "Comment"], ["commentable_id", 19], ["created_at", "2024-07-27 07:52:49.767211"], ["updated_at", "2024-07-27 07:52:49.767211"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mComment Load (1.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComment Create (0.8ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "commentable_type", "commentable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Corporis fuga placeat. A sapiente beatae. Nisi qui et."], ["user_id", 40], ["commentable_type", "Comment"], ["commentable_id", 17], ["created_at", "2024-07-27 07:52:49.790580"], ["updated_at", "2024-07-27 07:52:49.790580"]]
+  [1m[36mTRANSACTION (7.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComment Create (1.0ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "commentable_type", "commentable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Officiis et libero. Vitae amet perspiciatis. Corrupti natus cum."], ["user_id", 13], ["commentable_type", "Comment"], ["commentable_id", 4], ["created_at", "2024-07-27 07:52:49.816881"], ["updated_at", "2024-07-27 07:52:49.816881"]]
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComment Create (0.7ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "commentable_type", "commentable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Voluptatem unde in. Ut quo ipsum. Vel eligendi nulla."], ["user_id", 33], ["commentable_type", "Comment"], ["commentable_id", 13], ["created_at", "2024-07-27 07:52:49.846704"], ["updated_at", "2024-07-27 07:52:49.846704"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mComment Load (1.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComment Create (0.7ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "commentable_type", "commentable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Et enim dolorum. Sint doloremque accusantium. Modi cupiditate repudiandae."], ["user_id", 44], ["commentable_type", "Comment"], ["commentable_id", 13], ["created_at", "2024-07-27 07:52:49.869179"], ["updated_at", "2024-07-27 07:52:49.869179"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mComment Load (2.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComment Create (2.9ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "commentable_type", "commentable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Est dignissimos fuga. Quo qui et. Quam dolorum sunt."], ["user_id", 38], ["commentable_type", "Comment"], ["commentable_id", 2], ["created_at", "2024-07-27 07:52:49.892986"], ["updated_at", "2024-07-27 07:52:49.892986"]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mComment Load (2.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComment Create (1.5ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "commentable_type", "commentable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Placeat magnam ea. Non minima modi. Non quia saepe."], ["user_id", 58], ["commentable_type", "Comment"], ["commentable_id", 10], ["created_at", "2024-07-27 07:52:49.939570"], ["updated_at", "2024-07-27 07:52:49.939570"]]
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mComment Load (1.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComment Create (3.4ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "commentable_type", "commentable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Quod quis magni. Qui voluptatem non. Blanditiis sint enim."], ["user_id", 36], ["commentable_type", "Comment"], ["commentable_id", 24], ["created_at", "2024-07-27 07:52:49.978409"], ["updated_at", "2024-07-27 07:52:49.978409"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mComment Load (2.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComment Create (2.3ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "commentable_type", "commentable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Sunt rerum saepe. Consequatur qui et. Laborum modi dolore."], ["user_id", 26], ["commentable_type", "Comment"], ["commentable_id", 26], ["created_at", "2024-07-27 07:52:50.011790"], ["updated_at", "2024-07-27 07:52:50.011790"]]
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mComment Load (2.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComment Create (2.6ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "commentable_type", "commentable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Dolor dolorum dignissimos. Ut harum rerum. Sit vel sapiente."], ["user_id", 35], ["commentable_type", "Comment"], ["commentable_id", 9], ["created_at", "2024-07-27 07:52:50.066618"], ["updated_at", "2024-07-27 07:52:50.066618"]]
+  [1m[36mTRANSACTION (4.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mComment Load (5.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComment Create (2.6ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "commentable_type", "commentable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Dolorem et aut. Et ipsum dignissimos. Sit nobis quidem."], ["user_id", 25], ["commentable_type", "Comment"], ["commentable_id", 4], ["created_at", "2024-07-27 07:52:50.106797"], ["updated_at", "2024-07-27 07:52:50.106797"]]
+  [1m[36mTRANSACTION (4.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComment Create (0.7ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "commentable_type", "commentable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Occaecati accusamus quae. Vitae tempore voluptate. Magni sequi incidunt."], ["user_id", 14], ["commentable_type", "Comment"], ["commentable_id", 11], ["created_at", "2024-07-27 07:52:50.149599"], ["updated_at", "2024-07-27 07:52:50.149599"]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComment Create (0.6ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "commentable_type", "commentable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Exercitationem quasi quis. Quia maxime odit. Omnis eaque ex."], ["user_id", 54], ["commentable_type", "Comment"], ["commentable_id", 22], ["created_at", "2024-07-27 07:52:50.174775"], ["updated_at", "2024-07-27 07:52:50.174775"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComment Create (0.6ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "commentable_type", "commentable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Id quia quasi. Assumenda sit repudiandae. Ipsum ea quaerat."], ["user_id", 57], ["commentable_type", "Comment"], ["commentable_id", 7], ["created_at", "2024-07-27 07:52:50.191986"], ["updated_at", "2024-07-27 07:52:50.191986"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComment Create (0.7ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "commentable_type", "commentable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Quas quisquam ut. Non vel porro. Molestiae ut tempora."], ["user_id", 50], ["commentable_type", "Comment"], ["commentable_id", 17], ["created_at", "2024-07-27 07:52:50.214359"], ["updated_at", "2024-07-27 07:52:50.214359"]]
+  [1m[36mTRANSACTION (5.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mComment Load (2.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComment Create (0.8ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "commentable_type", "commentable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Repellat non veniam. Modi aut rerum. Dolorum nulla mollitia."], ["user_id", 48], ["commentable_type", "Comment"], ["commentable_id", 13], ["created_at", "2024-07-27 07:52:50.254980"], ["updated_at", "2024-07-27 07:52:50.254980"]]
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mComment Load (4.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComment Create (2.6ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "commentable_type", "commentable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Quam et qui. Excepturi repudiandae suscipit. Unde possimus sed."], ["user_id", 12], ["commentable_type", "Comment"], ["commentable_id", 2], ["created_at", "2024-07-27 07:52:50.289894"], ["updated_at", "2024-07-27 07:52:50.289894"]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mComment Load (3.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComment Create (0.8ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "commentable_type", "commentable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["content", "Rerum non autem. Est dolores voluptas. Earum enim ducimus."], ["user_id", 27], ["commentable_type", "Comment"], ["commentable_id", 33], ["created_at", "2024-07-27 07:52:50.332786"], ["updated_at", "2024-07-27 07:52:50.332786"]]
+  [1m[36mTRANSACTION (4.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (56.9ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Lake Harley"], ["created_at", "2024-07-27 07:57:42.054328"], ["updated_at", "2024-07-27 07:57:42.054328"], ["zip_code", "23488-4971"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (1.1ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "New Nadia"], ["created_at", "2024-07-27 08:01:02.748050"], ["updated_at", "2024-07-27 08:01:02.748050"], ["zip_code", "55840-5057"]]
+  [1m[36mTRANSACTION (19.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (1.0ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Katlynbury"], ["created_at", "2024-07-27 08:03:14.208829"], ["updated_at", "2024-07-27 08:03:14.208829"], ["zip_code", "85964-3704"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "justina@moore-lowe.test"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCity Create (1.0ms)[0m  [1m[32mINSERT INTO "cities" ("name", "created_at", "updated_at", "zip_code") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "West Aldenstad"], ["created_at", "2024-07-27 08:10:14.751651"], ["updated_at", "2024-07-27 08:10:14.751651"], ["zip_code", "66633"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (19.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "pearly.nader@treutel.test"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
